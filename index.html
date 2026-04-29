@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>치유관광협회 발족 준비위원회 — 행사계획서</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:    #1a2535;
+  --blue:   #1b4f72;
+  --teal:   #1a6b72;
+  --mid:    #2e86ab;
+  --sage:   #5d8a6e;
+  --light:  #eaf4fb;
+  --sand:   #f5f0e8;
+  --cream:  #fdfbf7;
+  --gold:   #b7950b;
+  --muted:  #6b7c8d;
+  --rule:   #d0dde8;
+  --white:  #ffffff;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.75;
+  font-size: 15px;
+}
+
+/* ── PRINT button ── */
+.print-btn {
+  position: fixed; bottom: 32px; right: 32px; z-index: 999;
+  background: var(--blue); color: #fff;
+  border: none; border-radius: 50px;
+  padding: 12px 24px; font-size: 13px;
+  font-family: 'Noto Sans KR', sans-serif; font-weight: 500;
+  cursor: pointer; box-shadow: 0 4px 20px rgba(27,79,114,0.35);
+  transition: all .25s;
+  display: flex; align-items: center; gap: 8px;
+}
+.print-btn:hover { background: #154060; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(27,79,114,0.4); }
+
+/* ── PAGE WRAPPER ── */
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+/* ── HEADER HERO ── */
+.hero {
+  position: relative;
+  background: var(--blue);
+  color: #fff;
+  padding: 64px 56px 56px;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 90% 10%, rgba(255,255,255,0.06) 0%, transparent 55%),
+    radial-gradient(ellipse at 10% 90%, rgba(46,134,171,0.4) 0%, transparent 55%);
+}
+.hero::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, var(--gold), var(--mid), var(--sage));
+}
+.hero-eyebrow {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px; font-weight: 400; letter-spacing: 3px;
+  text-transform: uppercase; color: rgba(255,255,255,0.6);
+  margin-bottom: 20px;
+  position: relative;
+}
+.hero-title {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 36px; font-weight: 700; line-height: 1.3;
+  margin-bottom: 10px; position: relative;
+}
+.hero-subtitle {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 18px; font-weight: 300;
+  color: rgba(255,255,255,0.75);
+  position: relative; margin-bottom: 36px;
+}
+.hero-meta {
+  display: flex; flex-wrap: wrap; gap: 24px;
+  position: relative;
+}
+.hero-meta-item {
+  display: flex; align-items: center; gap: 10px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px; padding: 10px 18px;
+  font-size: 13px; color: rgba(255,255,255,0.9);
+}
+.hero-meta-item .icon { font-size: 16px; }
+.hero-meta-item strong { color: #fff; font-weight: 600; display: block; font-size: 14px; }
+.hero-meta-item span { color: rgba(255,255,255,0.7); font-size: 12px; }
+
+/* ── OVERVIEW BAND ── */
+.overview-band {
+  background: var(--sand);
+  border-left: 4px solid var(--gold);
+  padding: 28px 40px;
+  margin-bottom: 48px;
+}
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 40px;
+}
+.ov-item { display: flex; gap: 12px; align-items: flex-start; padding: 4px 0; }
+.ov-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--muted);
+  min-width: 72px; padding-top: 2px;
+}
+.ov-value { font-size: 14px; color: var(--ink); line-height: 1.55; }
+.ov-value strong { color: var(--blue); font-weight: 600; }
+
+/* ── SECTION ── */
+.section { margin-bottom: 52px; }
+
+.sec-header {
+  display: flex; align-items: center; gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--rule);
+}
+.sec-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px; font-weight: 600; letter-spacing: 2px;
+  color: var(--mid); text-transform: uppercase;
+}
+.sec-title {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 20px; font-weight: 700;
+  color: var(--blue);
+}
+.sec-eng {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px; font-style: italic;
+  color: var(--muted); margin-left: auto;
+}
+
+/* ── BACKGROUND CARD ── */
+.bg-card {
+  background: var(--light);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin-bottom: 20px;
+}
+.bg-card-title {
+  font-size: 12px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--mid);
+  margin-bottom: 10px;
+}
+.bg-card p { font-size: 14px; color: #3a4a5a; line-height: 1.8; }
+
+/* ── PURPOSE LIST ── */
+.purpose-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.purpose-list li {
+  display: flex; gap: 12px; align-items: flex-start;
+  font-size: 14px; color: #3a4a5a; line-height: 1.65;
+}
+.purpose-list li::before {
+  content: '';
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--mid); flex-shrink: 0; margin-top: 7px;
+}
+
+/* ── TIMELINE ── */
+.timeline { position: relative; }
+.timeline::before {
+  content: '';
+  position: absolute; left: 88px; top: 0; bottom: 0;
+  width: 1px; background: var(--rule);
+}
+.tl-item {
+  display: flex; gap: 0; margin-bottom: 4px;
+  position: relative;
+}
+.tl-time {
+  width: 88px; flex-shrink: 0;
+  font-size: 12px; font-weight: 600;
+  color: var(--muted); padding: 14px 16px 14px 0;
+  text-align: right; line-height: 1.3;
+}
+.tl-dot-col {
+  width: 32px; flex-shrink: 0;
+  display: flex; flex-direction: column; align-items: center;
+  padding-top: 18px;
+}
+.tl-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--white); border: 2px solid var(--mid);
+  z-index: 1; flex-shrink: 0;
+}
+.tl-dot.key { background: var(--blue); border-color: var(--blue); width: 13px; height: 13px; }
+.tl-card {
+  flex: 1;
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 14px 20px;
+  margin-left: 8px;
+  margin-bottom: 8px;
+}
+.tl-card:hover { border-color: var(--mid); box-shadow: 0 2px 12px rgba(27,79,114,0.08); }
+.tl-label {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 6px;
+}
+.tl-tag {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.8px;
+  text-transform: uppercase; padding: 2px 9px;
+  border-radius: 20px; white-space: nowrap;
+}
+.tag-blue   { background: rgba(27,79,114,0.1); color: var(--blue); }
+.tag-teal   { background: rgba(26,107,114,0.1); color: var(--teal); }
+.tag-mid    { background: rgba(46,134,171,0.12); color: var(--mid); }
+.tag-sage   { background: rgba(93,138,110,0.12); color: var(--sage); }
+.tag-gold   { background: rgba(183,149,11,0.1); color: var(--gold); }
+.tag-gray   { background: rgba(107,124,141,0.1); color: var(--muted); }
+.tl-name {
+  font-size: 14px; font-weight: 700;
+  color: var(--ink);
+}
+.tl-body { font-size: 13px; color: var(--muted); line-height: 1.65; }
+
+/* ── AGENDA TABLE ── */
+.agenda-table { width: 100%; border-collapse: collapse; }
+.agenda-table th {
+  background: var(--blue); color: #fff;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.5px;
+  padding: 12px 16px; text-align: left;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.agenda-table th:first-child { border-radius: 8px 0 0 0; }
+.agenda-table th:last-child  { border-radius: 0 8px 0 0; }
+.agenda-table td {
+  padding: 12px 16px; font-size: 13px; color: #3a4a5a;
+  border-bottom: 1px solid var(--rule); vertical-align: top;
+  line-height: 1.65;
+}
+.agenda-table tr:last-child td { border-bottom: none; }
+.agenda-table tr:nth-child(even) td { background: var(--light); }
+.agenda-table .label-col {
+  font-weight: 700; color: var(--blue);
+  background: rgba(27,79,114,0.04);
+  white-space: nowrap;
+}
+
+/* ── CARDS GRID ── */
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.card {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  padding: 20px 22px;
+  position: relative;
+  overflow: hidden;
+}
+.card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+}
+.card.c-blue::before   { background: var(--blue); }
+.card.c-teal::before   { background: var(--teal); }
+.card.c-mid::before    { background: var(--mid); }
+.card.c-sage::before   { background: var(--sage); }
+.card.c-gold::before   { background: var(--gold); }
+.card-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px; font-weight: 300;
+  color: var(--rule); line-height: 1;
+  margin-bottom: 8px;
+}
+.card-title {
+  font-size: 13px; font-weight: 700;
+  color: var(--blue); margin-bottom: 8px;
+}
+.card-body { font-size: 12px; color: var(--muted); line-height: 1.7; }
+
+/* ── BOOK HIGHLIGHT ── */
+.book-highlight {
+  background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+  color: #fff; border-radius: 14px;
+  padding: 32px 36px; margin-bottom: 24px;
+  position: relative; overflow: hidden;
+}
+.book-highlight::before {
+  content: '"';
+  position: absolute; top: -20px; right: 30px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 160px; font-weight: 300;
+  color: rgba(255,255,255,0.06); line-height: 1;
+}
+.book-kor {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 20px; font-weight: 700;
+  margin-bottom: 6px;
+}
+.book-eng {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px; font-style: italic;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 20px;
+}
+.book-desc { font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.8; }
+
+/* ── BOOK TABLE ── */
+.book-table { width: 100%; border-collapse: collapse; }
+.book-table td {
+  padding: 11px 16px; font-size: 13px;
+  border-bottom: 1px solid var(--rule); vertical-align: top;
+  line-height: 1.65;
+}
+.book-table tr:last-child td { border-bottom: none; }
+.book-table .bk-label {
+  font-weight: 700; color: var(--teal);
+  background: rgba(26,107,114,0.06);
+  white-space: nowrap; width: 120px;
+}
+
+/* ── ROADMAP ── */
+.roadmap { display: flex; flex-direction: column; gap: 0; position: relative; }
+.roadmap::before {
+  content: '';
+  position: absolute; left: 40px; top: 24px; bottom: 24px;
+  width: 2px; background: linear-gradient(to bottom, var(--blue), var(--sage));
+}
+.rm-item {
+  display: flex; gap: 20px; align-items: flex-start;
+  padding: 12px 0;
+}
+.rm-dot-col { width: 80px; flex-shrink: 0; display: flex; justify-content: center; padding-top: 8px; }
+.rm-dot {
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--white); border: 3px solid var(--blue);
+  z-index: 1; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 9px; font-weight: 700; color: var(--blue);
+}
+.rm-content {
+  flex: 1;
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 16px 20px;
+}
+.rm-content:hover { border-color: var(--mid); }
+.rm-phase {
+  font-size: 11px; font-weight: 700; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--mid); margin-bottom: 4px;
+}
+.rm-title { font-size: 14px; font-weight: 700; color: var(--blue); margin-bottom: 4px; }
+.rm-time {
+  display: inline-block;
+  font-size: 11px; background: var(--light);
+  border: 1px solid var(--rule); border-radius: 20px;
+  padding: 2px 10px; color: var(--muted); margin-bottom: 8px;
+}
+.rm-body { font-size: 13px; color: var(--muted); line-height: 1.65; }
+
+/* ── PREP TABLE ── */
+.prep-table { width: 100%; border-collapse: collapse; }
+.prep-table th {
+  background: var(--ink); color: #fff;
+  font-size: 12px; font-weight: 600; padding: 11px 16px; text-align: left;
+}
+.prep-table td {
+  padding: 11px 16px; font-size: 13px;
+  border-bottom: 1px solid var(--rule); vertical-align: middle; line-height: 1.6;
+}
+.prep-table tr:last-child td { border-bottom: none; }
+.prep-table .prep-cat {
+  font-weight: 700; color: var(--teal);
+  background: rgba(26,107,114,0.06); white-space: nowrap;
+}
+.prep-table .prep-owner { color: var(--muted); font-size: 12px; white-space: nowrap; }
+
+/* ── EFFECT LIST ── */
+.effect-list { display: flex; flex-direction: column; gap: 12px; }
+.effect-item {
+  display: flex; gap: 16px; align-items: flex-start;
+  padding: 16px 20px;
+  background: var(--white); border: 1px solid var(--rule); border-radius: 10px;
+}
+.effect-icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: var(--light); display: flex; align-items: center; justify-content: center;
+  font-size: 18px; flex-shrink: 0;
+}
+.effect-title { font-size: 14px; font-weight: 700; color: var(--blue); margin-bottom: 4px; }
+.effect-body  { font-size: 13px; color: var(--muted); line-height: 1.65; }
+
+/* ── DECLARATION ── */
+.declaration {
+  background: var(--blue); color: #fff;
+  border-radius: 14px; padding: 40px 48px;
+  text-align: center; margin-top: 60px;
+  position: relative; overflow: hidden;
+}
+.declaration::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 80% 20%, rgba(46,134,171,0.4) 0%, transparent 60%);
+}
+.decl-kor {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 20px; font-weight: 700;
+  margin-bottom: 8px; position: relative;
+}
+.decl-eng {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px; font-style: italic;
+  color: rgba(255,255,255,0.65); margin-bottom: 24px; position: relative;
+}
+.decl-stamp {
+  position: relative;
+  font-size: 13px; color: rgba(255,255,255,0.6);
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding-top: 20px; margin-top: 8px;
+}
+.decl-stamp strong { color: #fff; display: block; font-size: 15px; margin-top: 4px; }
+
+/* ── GOLD RULE ── */
+.gold-rule {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 36px 0;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  .hero { padding: 40px 24px 36px; }
+  .hero-title { font-size: 26px; }
+  .hero-meta { flex-direction: column; gap: 10px; }
+  .overview-grid { grid-template-columns: 1fr; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .overview-band { padding: 20px 20px; }
+  .book-highlight { padding: 24px 24px; }
+  .declaration { padding: 32px 24px; }
+  .timeline::before { left: 76px; }
+  .tl-time { width: 76px; font-size: 11px; }
+}
+
+/* ── PRINT ── */
+@media print {
+  .print-btn { display: none; }
+  body { font-size: 12px; }
+  .page { max-width: 100%; padding: 0; }
+  .hero { break-inside: avoid; }
+  .section { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">
+  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9V2h12v7"/><rect x="2" y="9" width="20" height="9" rx="1"/><path d="M6 18v4h12v-4"/></svg>
+  인쇄 / PDF 저장
+</button>
+
+<div class="page">
+
+  <!-- ══ HERO ══ -->
+  <div class="hero">
+    <div class="hero-eyebrow">행 사 계 획 서 · Event Planning Document</div>
+    <div class="hero-title">치유관광협회 발족을 위한<br>준비위원회 모임</div>
+    <div class="hero-subtitle">대한민국 치유관광 대국 실현을 위한 첫걸음</div>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <span class="icon">📅</span>
+        <div><strong>2026년 5월 5일 (화)</strong><span>오후 13:00 ~ 17:00</span></div>
+      </div>
+      <div class="hero-meta-item">
+        <span class="icon">📍</span>
+        <div><strong>국립공주대학교</strong><span>인문사회대학 124호 세미나실</span></div>
+      </div>
+      <div class="hero-meta-item">
+        <span class="icon">👥</span>
+        <div><strong>준비위원회 창립 모임</strong><span>약 30명 내외</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ OVERVIEW BAND ══ -->
+  <div class="overview-band">
+    <div class="overview-grid">
+      <div class="ov-item"><span class="ov-label">행사명</span><span class="ov-value"><strong>치유관광협회 발족 준비위원회 창립 모임</strong></span></div>
+      <div class="ov-item"><span class="ov-label">주관</span><span class="ov-value">치유관광협회 발족 준비위원회</span></div>
+      <div class="ov-item"><span class="ov-label">일시</span><span class="ov-value">2026년 5월 5일(화) 13:00 ~ 17:00</span></div>
+      <div class="ov-item"><span class="ov-label">규모</span><span class="ov-value">약 30명 내외</span></div>
+      <div class="ov-item"><span class="ov-label">장소</span><span class="ov-value">국립공주대학교 인문사회대학 124호 세미나실</span></div>
+      <div class="ov-item"><span class="ov-label">참석자</span><span class="ov-value">준비위원, 관련 기관·단체 관계자, 학계 전문가</span></div>
+    </div>
+  </div>
+
+  <!-- ══ 1. 추진 배경 및 목적 ══ -->
+  <div class="section">
+    <div class="sec-header">
+      <span class="sec-num">01</span>
+      <span class="sec-title">추진 배경 및 목적</span>
+      <span class="sec-eng">Background &amp; Purpose</span>
+    </div>
+
+    <div class="bg-card">
+      <div class="bg-card-title">추진 배경</div>
+      <p>
+        2026년 4월 9일, <strong>「치유관광산업 육성에 관한 법률」</strong>이 공식 시행됨에 따라 치유관광 산업의 제도적 기반이 마련되었습니다. 이 법률의 효과적인 이행과 산업 생태계의 건전한 발전을 위하여 치유관광 관련 협회·단체·기업을 아우르는 구심점 역할을 담당할 <strong>(가칭) 대한치유관광협회</strong>의 창립이 시급히 요구됩니다.
+      </p>
+    </div>
+
+    <div class="bg-card" style="background:var(--cream); border-color: var(--rule);">
+      <div class="bg-card-title" style="color: var(--teal);">개최 목적</div>
+      <ul class="purpose-list">
+        <li>치유관광산업 육성법 시행에 따른 법정 대응 기구로서의 협회 창립 필요성 공유</li>
+        <li>국내 치유 관련 모든 협회·단체를 회원사로 통합하는 연대 체계 구축 방안 협의</li>
+        <li>대한민국을 세계 최고 수준의 <strong>치유관광 대국</strong>으로 도약시키기 위한 국가 전략 수립</li>
+        <li>영문 출판물 「Road to a Healing Tourism Nation」 발간을 통한 <strong>글로컬 사업 추진 계획</strong> 논의</li>
+        <li>준비위원회 운영 구조 및 협회 발족 로드맵 수립</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="gold-rule"></div>
+
+  <!-- ══ 2. 세부 일정 ══ -->
+  <div class="section">
+    <div class="sec-header">
+      <span class="sec-num">02</span>
+      <span class="sec-title">세부 행사 일정</span>
+      <span class="sec-eng">Program Schedule</span>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">13:00<br>13:20</div>
+        <div class="tl-dot-col"><div class="tl-dot key"></div></div>
+        <div class="tl-card">
+          <div class="tl-label"><span class="tl-tag tag-gray">등록</span><span class="tl-name">등록 및 접수</span></div>
+          <div class="tl-body">참석자 등록, 자료집 배부, 명함 교환</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">13:20<br>13:30</div>
+        <div class="tl-dot-col"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <div class="tl-label"><span class="tl-tag tag-blue">개회</span><span class="tl-name">개회식</span></div>
+          <div class="tl-body">개회 선언, 국민의례, 참석자 소개</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">13:30<br>14:00</div>
+        <div class="tl-dot-col"><div class="tl-dot key"></div></div>
+        <div class="tl-card">
+          <div class="tl-label"><span class="tl-tag tag-blue">기조</span><span class="tl-name">기조 발표</span></div>
+          <div class="tl-body">치유관광산업 육성에 관한 법률 시행의 의미와 협회 창립의 필요성<br><em style="color:var(--muted); font-size:12px">발표: 준비위원회 대표 / 학계 전문가</em></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">14:00<br>14:30</div>
+        <div class="tl-dot-col"><div class="tl-dot key"></div></div>
+        <div class="tl-card">
+          <div class="tl-label"><span class="tl-tag tag-teal">발표 1</span><span class="tl-name">대한치유관광협회 창립 방향 및 조직 구조</span></div>
+          <div class="tl-body">회원사 구성 원칙 및 가입 절차 / 분과위원회 설치 계획</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">14:30<br>15:00</div>
+        <div class="tl-dot-col"><div class="tl-dot key"></div></div>
+        <div class="tl-card">
+          <div class="tl-label"><span class="tl-tag tag-mid">발표 2</span><span class="tl-name">치유관광 대국 프로젝트 &amp; 글로컬 출판</span></div>
+          <div class="tl-body">「Road to a Healing Tourism Nation」 영문 출판 계획 / 글로컬(Glocal) 사업 추진 전략 및 해외 협력 방안</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">15:00<br>15:15</div>
+        <div class="tl-dot-col"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <div class="tl-label"><span class="tl-tag tag-gray">휴식</span><span class="tl-name">Coffee Break / 네트워킹</span></div>
+          <div class="tl-body">참석자 간 자유 교류</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">15:15<br>16:15</div>
+        <div class="tl-dot-col"><div class="tl-dot key"></div></div>
+        <div class="tl-card">
+          <div class="tl-label"><span class="tl-tag tag-sage">토론</span><span class="tl-name">종합 토론</span></div>
+          <div class="tl-body">협회 창립 준비 일정 및 역할 분담 논의 / 발족 로드맵 확정 / 준비위원회 구성 및 위원 선임 / 재원 조달 방안</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">16:15<br>16:45</div>
+        <div class="tl-dot-col"><div class="tl-dot key"></div></div>
+        <div class="tl-card">
+          <div class="tl-label"><span class="tl-tag tag-gold">결의</span><span class="tl-name">결의 채택</span></div>
+          <div class="tl-body">치유관광협회 발족 준비위원회 공동선언문 낭독 및 채택 / 치유관광 대국 실현을 위한 글로컬 프로젝트 결의</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">16:45<br>17:00</div>
+        <div class="tl-dot-col"><div class="tl-dot big"></div></div>
+        <div class="tl-card">
+          <div class="tl-label"><span class="tl-tag tag-gray">폐회</span><span class="tl-name">폐회식</span></div>
+          <div class="tl-body">기념 촬영, 폐회 선언, 향후 일정 안내</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gold-rule"></div>
+
+  <!-- ══ 3. 핵심 추진 과제 ══ -->
+  <div class="section">
+    <div class="sec-header">
+      <span class="sec-num">03</span>
+      <span class="sec-title">핵심 추진 과제</span>
+      <span class="sec-eng">Key Agenda Items</span>
+    </div>
+
+    <div class="cards-grid">
+      <div class="card c-blue">
+        <div class="card-num">01</div>
+        <div class="card-title">법률 이행 체계 구축</div>
+        <div class="card-body">치유관광산업 육성법(2026.4.9. 시행) 이행을 위한 민간 대응 창구 마련, 정부·지자체와의 협력 채널 구축</div>
+      </div>
+      <div class="card c-teal">
+        <div class="card-num">02</div>
+        <div class="card-title">회원사 통합 네트워크</div>
+        <div class="card-body">치유·웰니스·의료관광·산림치유·해양치유·한방·온천 등 관련 모든 협회·단체를 회원사로 등록하는 통합 플랫폼 구축</div>
+      </div>
+      <div class="card c-mid">
+        <div class="card-num">03</div>
+        <div class="card-title">치유관광 대국 프로젝트</div>
+        <div class="card-body">대한민국을 세계 치유관광의 중심지로 포지셔닝하는 국가 브랜드 전략 수립 및 추진</div>
+      </div>
+      <div class="card c-sage">
+        <div class="card-num">04</div>
+        <div class="card-title">영문 출판 글로컬 사업</div>
+        <div class="card-body">「Road to a Healing Tourism Nation」 영문 출판 → 해외 홍보·학술 교류·국제 컨퍼런스 활용, 글로컬 전략의 핵심 콘텐츠</div>
+      </div>
+      <div class="card c-gold" style="grid-column: 1 / -1;">
+        <div class="card-num">05</div>
+        <div class="card-title">창립총회 준비</div>
+        <div class="card-body">2026년 하반기 창립총회 개최 목표 / 정관 제정, 임원 선출, 사업계획 수립</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gold-rule"></div>
+
+  <!-- ══ 4. 글로컬 영문 출판 ══ -->
+  <div class="section">
+    <div class="sec-header">
+      <span class="sec-num">04</span>
+      <span class="sec-title">글로컬 영문 출판 추진 계획</span>
+      <span class="sec-eng">Glocal Publication Plan</span>
+    </div>
+
+    <div class="book-highlight">
+      <div class="book-kor">「치유관광 대국으로 가는 길」</div>
+      <div class="book-eng">Road to a Healing Tourism Nation — English Edition</div>
+      <div class="book-desc">
+        치유관광 대국 프로젝트의 일환으로, 대한민국 치유관광의 비전·정책·모델을 영문으로 출판하여 국제 사회에 소개하고
+        글로컬(Global+Local) 전략의 핵심 콘텐츠로 활용합니다.
+      </div>
+    </div>
+
+    <table class="book-table">
+      <tbody>
+        <tr>
+          <td class="bk-label">출판 목적</td>
+          <td>대한민국 치유관광의 비전·정책·모델을 국제 사회에 소개하고 글로벌 협력 네트워크 구축</td>
+        </tr>
+        <tr>
+          <td class="bk-label">주요 내용</td>
+          <td>치유관광산업 육성법 소개 / K-치유관광 모델 / 권역별 치유관광 자원 / 정책 로드맵 / 국제 협력 방안</td>
+        </tr>
+        <tr>
+          <td class="bk-label">활용 전략</td>
+          <td>해외 관광청·대사관 배포 / 국제 관광 컨퍼런스 배포 / 해외 학술 DB 등재 / 글로컬 홍보 자료 활용</td>
+        </tr>
+        <tr>
+          <td class="bk-label">추진 일정</td>
+          <td>원고 집필: 2026년 6~8월 &nbsp;|&nbsp; 번역·교정: 2026년 9~10월 &nbsp;|&nbsp; 출판·배포: 2026년 11월(목표)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="gold-rule"></div>
+
+  <!-- ══ 5. 로드맵 ══ -->
+  <div class="section">
+    <div class="sec-header">
+      <span class="sec-num">05</span>
+      <span class="sec-title">협회 발족 로드맵</span>
+      <span class="sec-eng">Launch Roadmap</span>
+    </div>
+
+    <div class="roadmap">
+      <div class="rm-item">
+        <div class="rm-dot-col"><div class="rm-dot">1</div></div>
+        <div class="rm-content">
+          <div class="rm-phase">Stage 1</div>
+          <div class="rm-title">준비위 발족</div>
+          <div class="rm-time">2026년 5월</div>
+          <div class="rm-body">준비위원회 구성 완료, 역할 분담, 정관 초안 작성 착수</div>
+        </div>
+      </div>
+      <div class="rm-item">
+        <div class="rm-dot-col"><div class="rm-dot">2</div></div>
+        <div class="rm-content">
+          <div class="rm-phase">Stage 2</div>
+          <div class="rm-title">회원사 모집</div>
+          <div class="rm-time">2026년 6 ~ 7월</div>
+          <div class="rm-body">치유 관련 협회·단체 대상 가입 설명회 개최 및 회원사 모집</div>
+        </div>
+      </div>
+      <div class="rm-item">
+        <div class="rm-dot-col"><div class="rm-dot">3</div></div>
+        <div class="rm-content">
+          <div class="rm-phase">Stage 3</div>
+          <div class="rm-title">영문 출판 추진</div>
+          <div class="rm-time">2026년 6 ~ 11월</div>
+          <div class="rm-body">「Road to a Healing Tourism Nation」 집필·번역·출판, 글로컬 사업 추진</div>
+        </div>
+      </div>
+      <div class="rm-item">
+        <div class="rm-dot-col"><div class="rm-dot">4</div></div>
+        <div class="rm-content">
+          <div class="rm-phase">Stage 4</div>
+          <div class="rm-title">창립총회 개최</div>
+          <div class="rm-time">2026년 하반기</div>
+          <div class="rm-body">대한치유관광협회 창립총회 개최, 임원 선출, 사업계획 확정</div>
+        </div>
+      </div>
+      <div class="rm-item">
+        <div class="rm-dot-col"><div class="rm-dot">5</div></div>
+        <div class="rm-content">
+          <div class="rm-phase">Stage 5</div>
+          <div class="rm-title">글로컬 론칭</div>
+          <div class="rm-time">2026년 12월 ~</div>
+          <div class="rm-body">영문 출판물 해외 배포, 국제 컨퍼런스 참가, 해외 기관과 MOU 체결</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gold-rule"></div>
+
+  <!-- ══ 6. 준비 사항 ══ -->
+  <div class="section">
+    <div class="sec-header">
+      <span class="sec-num">06</span>
+      <span class="sec-title">행사 준비 사항</span>
+      <span class="sec-eng">Preparation Checklist</span>
+    </div>
+
+    <table class="prep-table">
+      <thead>
+        <tr>
+          <th style="border-radius:8px 0 0 0;">구분</th>
+          <th>세부 사항</th>
+          <th style="border-radius:0 8px 0 0;">담당</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prep-cat">장소 준비</td>
+          <td>세미나실 좌석 배치, 빔프로젝터·마이크 설치, 현수막 게시</td>
+          <td class="prep-owner">준비위원회 사무국</td>
+        </tr>
+        <tr>
+          <td class="prep-cat">자료 준비</td>
+          <td>행사 자료집, 명찰, 서명부, 공동선언문 인쇄</td>
+          <td class="prep-owner">준비위원회 사무국</td>
+        </tr>
+        <tr>
+          <td class="prep-cat">발표 자료</td>
+          <td>각 주제 발표자 PPT 자료 사전 취합 및 검토</td>
+          <td class="prep-owner">발표자 / 사무국</td>
+        </tr>
+        <tr>
+          <td class="prep-cat">참석자 관리</td>
+          <td>사전 참가신청 접수, 당일 등록 운영</td>
+          <td class="prep-owner">준비위원회</td>
+        </tr>
+        <tr>
+          <td class="prep-cat">기념 촬영</td>
+          <td>단체 사진 촬영 장비 준비</td>
+          <td class="prep-owner">지정 촬영팀</td>
+        </tr>
+        <tr>
+          <td class="prep-cat">식음료</td>
+          <td>커피 브레이크용 음료 및 다과 준비</td>
+          <td class="prep-owner">준비위원회</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="gold-rule"></div>
+
+  <!-- ══ 7. 기대 효과 ══ -->
+  <div class="section">
+    <div class="sec-header">
+      <span class="sec-num">07</span>
+      <span class="sec-title">기대 효과</span>
+      <span class="sec-eng">Expected Outcomes</span>
+    </div>
+
+    <div class="effect-list">
+      <div class="effect-item">
+        <div class="effect-icon">⚖️</div>
+        <div>
+          <div class="effect-title">법·제도 대응</div>
+          <div class="effect-body">치유관광산업 육성법 시행에 맞춰 민간 대응 기구를 신속히 구축함으로써 산업 정책 형성에 적극 참여</div>
+        </div>
+      </div>
+      <div class="effect-item">
+        <div class="effect-icon">🤝</div>
+        <div>
+          <div class="effect-title">산업 통합</div>
+          <div class="effect-body">치유·웰니스·의료관광 등 분산된 협회들을 하나의 플랫폼으로 결집, 협상력·대표성 강화</div>
+        </div>
+      </div>
+      <div class="effect-item">
+        <div class="effect-icon">🌐</div>
+        <div>
+          <div class="effect-title">국제 경쟁력</div>
+          <div class="effect-body">영문 출판물과 글로컬 사업을 통해 K-치유관광 브랜드를 세계 시장에 선도적으로 포지셔닝</div>
+        </div>
+      </div>
+      <div class="effect-item">
+        <div class="effect-icon">🏫</div>
+        <div>
+          <div class="effect-title">지역 연계</div>
+          <div class="effect-body">공주대학교를 거점으로 충청권 치유관광 자원과 연계, 스마트메디컬웰니스 관광 모델 구현</div>
+        </div>
+      </div>
+      <div class="effect-item">
+        <div class="effect-icon">📚</div>
+        <div>
+          <div class="effect-title">학문적 기여</div>
+          <div class="effect-body">치유관광 분야의 학술적 논의를 선도하고, 국내외 연구·정책 협력 네트워크 확장</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ DECLARATION ══ -->
+  <div class="declaration">
+    <div class="decl-kor">대한민국을 치유관광 대국으로<br>— 치유관광협회가 앞장섭니다</div>
+    <div class="decl-eng">Road to a Healing Tourism Nation</div>
+    <div class="decl-stamp">
+      2026년 5월 5일
+      <strong>치유관광협회 발족 준비위원회</strong>
+      국립공주대학교 인문사회대학 124호 세미나실
+    </div>
+  </div>
+
+</div><!-- /page -->
+
+<script>
+// 스크롤 시 섹션 페이드인
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.style.opacity = 1; });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.section, .overview-band').forEach(el => {
+  el.style.opacity = 0;
+  el.style.transition = 'opacity 0.6s ease';
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
