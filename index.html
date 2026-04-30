@@ -959,25 +959,8 @@ body {
 
 </div><!-- /page -->
 
-<script>
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.style.opacity = 1;
-      e.target.style.transform = 'translateY(0)';
-    }
-  });
-}, { threshold: 0.08 });
-
-document.querySelectorAll('.section, .overview-band, .law-box').forEach(el => {
-  el.style.opacity = 0;
-  el.style.transform = 'translateY(16px)';
-  el.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
-  observer.observe(el);
-});
-</script>
-
-  <!-- ══ 참가 방법 ══ -->
+  
+<!-- ══ 참가 방법 ══ -->
 <section class="join-section">
   <div class="join-inner">
     <div class="section-eyebrow" style="color:rgba(255,255,255,0.6);">참가 방법 / How to Join</div>
@@ -1067,6 +1050,26 @@ document.querySelectorAll('.gua-card').forEach(card => {
   });
 });
 </script>
+
+  
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = 1;
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.08 });
+
+document.querySelectorAll('.section, .overview-band, .law-box').forEach(el => {
+  el.style.opacity = 0;
+  el.style.transform = 'translateY(16px)';
+  el.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
+  observer.observe(el);
+});
+</script>
+
   
 </body>
 </html>
